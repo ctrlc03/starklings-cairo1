@@ -22,7 +22,7 @@ fn test_arrays3() {
     let mut a = create_array();
     //TODO modify the method called below to make the test pass.
     // You should not change the index accessed.
-    a.at(2_usize);
+    assert(a.at(2_usize) == 1, 'Second element is not 2');
 }
 
 // Don't mind this for now.

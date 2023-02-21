@@ -14,16 +14,20 @@ fn sum_u8s(x: u8, y: u8) -> u8 {
 }
 
 //TODO modify the types of this function to prevent an overflow when summing big values
-fn sum_big_numbers(x: u8, y: u8) -> u8 {
-    x + y
+fn sum_big_numbers(x: u8, y: u8) -> u16 {
+    let mut a: u16 = x.into();
+    let mut b: u16 = y.into();
+    a + b
 }
 
 fn convert_to_felt(x: u8) -> felt {
     //TODO return x as a felt.
+    x.into()
 }
 
 fn convert_felt_to_u8(x: felt) -> u8 {
     //TODO return x as a u8.
+    x.try_into().unwrap()
 }
 
 #[test]
@@ -37,7 +41,7 @@ fn test_sum_big_numbers() {
     // Don't modify the values, just the types.
     // See how using the _u8 suffix on the numbers lets us specify the type?
     // Try to do the same thing with other integer types.
-    assert(sum_big_numbers(255_u8, 255_u8) == 510_u8, 'Something went wrong');
+    assert(sum_big_numbers(255_u8, 255_u8) == 510_u16, 'Something went wrong');
 }
 
 #[test]

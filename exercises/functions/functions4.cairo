@@ -15,11 +15,11 @@ fn main() {
     debug::print_felt(sale_price(original_price).into());
 }
 
-fn sale_price(price: u32) -> {
+fn sale_price(price: u32) -> u32 {
     if is_even(price) {
-        price - 10_u32
+        return price - 10_u32;
     } else {
-        price - 3_u32
+        return price - 3_u32;
     }
 }
 

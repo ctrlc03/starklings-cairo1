@@ -2,14 +2,11 @@
 // Fill in the rest of the line that has code missing!
 // No hints, there's no tricks, just get used to typing these :)
 
-// I AM NOT DONE
-
 fn main() {
     // A short string is a string whose length is at most 31 characters, and therefore can fit into a single field element.
     // Short strings are actually felts, they are not a real string.
     // Note the _single_ quotes that are used with short strings.
     
-
     let mut my_first_initial = 'C';
     if is_alphabetic(ref my_first_initial) {
         debug::print_felt('Alphabetical!');
@@ -19,7 +16,7 @@ fn main() {
         debug::print_felt('Neither alphabetic nor numeric!');
     }
 
-    let // Finish this line like the example! What's your favorite short string?
+    let mut your_character = 'B';
     // Try a letter, try a number, try a special character, try a short string!
     if is_alphabetic(ref your_character) {
         debug::print_felt('Alphabetical!');
